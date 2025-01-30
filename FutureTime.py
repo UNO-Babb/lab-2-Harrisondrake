@@ -19,19 +19,21 @@ def main():
   hours = input("Enter hours: ")
   hours = int(hours)
   
-  additionalHours = futureMinute // 60
+  
 
-  futureHour = (currentHour + hours + additionalHours) % 12
+  
 
-  print(futureHour)
+
 
   #Ask user for minutes
   minutes = input("Enter mintutes: ")
   minutes = int(minutes)
   futureMinute = (currentMinute + minutes) % 60
+  additionalHours = (futureMinute // 60)
+  futureMinute = futureMinute % 60
+  futureHour = (currentHour + hours + additionalHours) 
+  futureHour = (futureHour % 12)
   
-  print(futureMinute)
-
   
   strHour = str(futureHour)
   strMin = str(futureMinute)
